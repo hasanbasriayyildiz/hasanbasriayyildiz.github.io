@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hasan Basri Ayyıldız</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hasan Basri Ayyıldız</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-:root{
---bg:#f6f8fc;
---card:#ffffff;
---text:#111827;
---muted:#6b7280;
---line:#e5e7eb;
---blue:#2563eb;
---blue2:#1d4ed8;
---accent:#f59e0b;
-}
 
 body{
 font-family:Inter;
 margin:0;
-background:var(--bg);
-color:var(--text);
+background:#f6f8fc;
+color:#111827;
 }
 
 .wrap{
-max-width:920px;
+max-width:950px;
 margin:auto;
 padding:20px;
 }
@@ -50,48 +40,56 @@ margin-top:8px;
 opacity:0.9;
 }
 
-.badge{
-display:inline-block;
-padding:6px 12px;
-background:rgba(255,255,255,0.2);
-border-radius:20px;
-margin-top:10px;
-font-size:13px;
-}
-
 .btn{
 display:inline-block;
-padding:10px 14px;
+padding:10px 16px;
 margin:6px;
 background:white;
 color:#1e3a8a;
 border-radius:10px;
 text-decoration:none;
 font-weight:600;
+border:1px solid #e5e7eb;
+}
+
+.btn:hover{
+background:#f1f5f9;
 }
 
 main{
 margin-top:20px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:14px;
+gap:16px;
 }
 
 .card{
 background:white;
-padding:18px;
+padding:20px;
 border-radius:14px;
-border:1px solid var(--line);
+border:1.5px solid #d1d5db;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 .card h2{
 margin-top:0;
 color:#1e40af;
+display:flex;
+align-items:center;
+gap:8px;
 }
 
 .text{
-color:var(--muted);
+color:#4b5563;
 line-height:1.7;
+}
+
+.project-box{
+border:1.5px solid #e5e7eb;
+padding:14px;
+border-radius:12px;
+margin-top:12px;
+background:#fafafa;
 }
 
 .skills span{
@@ -101,13 +99,15 @@ padding:8px 12px;
 border-radius:20px;
 margin:4px;
 font-size:13px;
+border:1px solid #e5e7eb;
 }
 
 footer{
 text-align:center;
 margin-top:20px;
-color:var(--muted);
+color:#6b7280;
 }
+
 </style>
 </head>
 
@@ -119,20 +119,16 @@ color:var(--muted);
 <h1 class="title">Hasan Basri Ayyıldız</h1>
 <p class="sub">Elektrik-Elektronik Mühendisliği – Samsun Üniversitesi | GANO: 3.35</p>
 
-<div class="badge">Elektrikli Araç & RF Sistemleri</div>
-
-<br>
-
-<a class="btn" href="mailto:ayyildizhasanbasri10@gmail.com">Email</a>
-<a class="btn" href="https://www.linkedin.com/in/hasan-basri-ayyildiz-144507344" target="_blank">LinkedIn</a>
-<a class="btn" href="HasanBasriAyyıldız_Cv.pdf" target="_blank">CV İndir</a>
+<a class="btn" href="mailto:ayyildizhasanbasri10@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+<a class="btn" href="https://www.linkedin.com/in/hasan-basri-ayyildiz-144507344" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a class="btn" href="HasanBasriAyyıldız_Cv.pdf" target="_blank"><i class="fas fa-download"></i> CV İndir</a>
 
 </header>
 
 <main>
 
 <section class="card">
-<h2>Hakkımda</h2>
+<h2><i class="fas fa-user"></i> Hakkımda</h2>
 
 <p class="text">
 Elektrik-Elektronik Mühendisliği 3. sınıf öğrencisiyim. Elektrikli araç teknolojileri ve haberleşme sistemleri alanlarında kendimi geliştirmeye devam etmekteyim. EVOART Elektrikli Araç Takımı’nda motor tasarım ekibinde aktif olarak görev almakta ve elektrikli araç motor sistemleri üzerine çalışmalar yürütmekteyim. Aynı zamanda TÜBİTAK 2209-A kapsamında RF kapsama haritalandırması ve spektrum analizi projelerinde yer almakta, kablosuz haberleşme sistemleri üzerine teknik deneyim kazanmaktayım.
@@ -141,27 +137,39 @@ Elektrik-Elektronik Mühendisliği 3. sınıf öğrencisiyim. Elektrikli araç t
 </section>
 
 <section class="card">
-<h2>Projeler</h2>
+<h2><i class="fas fa-diagram-project"></i> Projeler</h2>
 
-<b>EVOART Elektrikli Araç Takımı</b>
+<div class="project-box">
+
+<b><i class="fas fa-car-battery"></i> EVOART Elektrikli Araç Takımı</b>
 <p class="text">Motor tasarımı ve elektrik sistemleri geliştirme.</p>
-<a class="btn" href="https://www.instagram.com/evoart2020" target="_blank">Takım Sayfası</a>
 
-<br><br>
+<a class="btn" href="https://www.instagram.com/evoart2020" target="_blank">
+<i class="fab fa-instagram"></i> Takım Sayfası
+</a>
 
-<b>TÜBİTAK 2209-A RF Projesi</b>
+</div>
+
+<div class="project-box">
+
+<b><i class="fas fa-satellite-dish"></i> TÜBİTAK 2209-A RF Projesi</b>
 <p class="text">RF kapsama haritalandırması ve spektrum doluluk analizi.</p>
-<a class="btn" href="https://hasanbasriayyildiz.github.io/TÜBİTAK_PROJESİ.pdf" target="_blank">Proje Raporu</a>
+
+<a class="btn" href="https://hasanbasriayyildiz.github.io/TÜBİTAK_PROJESİ.pdf" target="_blank">
+<i class="fas fa-file-alt"></i> Proje Raporu
+</a>
+
+</div>
 
 </section>
 
 <section class="card">
-<h2>Staj Deneyimi</h2>
+<h2><i class="fas fa-briefcase"></i> Staj Deneyimi</h2>
 <p class="text">YEDAŞ – Elektrik Dağıtım Stajı</p>
 </section>
 
 <section class="card">
-<h2>Teknik Beceriler</h2>
+<h2><i class="fas fa-tools"></i> Teknik Beceriler</h2>
 
 <div class="skills">
 <span>AutoCAD</span>
@@ -174,16 +182,23 @@ Elektrik-Elektronik Mühendisliği 3. sınıf öğrencisiyim. Elektrikli araç t
 </section>
 
 <section class="card">
-<h2>Sertifikalar</h2>
-<p class="text">BTK Akademi – Temel Elektronik ve Robotiğe Giriş</p>
-<a class="btn" href="https://hasanbasriayyildiz.github.io/Temel_Elektronik_ve_Robotiğe_Giriş_Sertifika.pdf" target="_blank">Sertifika</a>
+<h2><i class="fas fa-certificate"></i> Sertifikalar</h2>
+
+<div class="project-box">
+BTK Akademi – Temel Elektronik ve Robotiğe Giriş
+<br><br>
+<a class="btn" href="https://hasanbasriayyildiz.github.io/Temel_Elektronik_ve_Robotiğe_Giriş_Sertifika.pdf" target="_blank">
+<i class="fas fa-award"></i> Sertifika
+</a>
+</div>
+
 </section>
 
 <section class="card">
-<h2>İletişim</h2>
+<h2><i class="fas fa-address-card"></i> İletişim</h2>
 <p class="text">
-Email: ayyildizhasanbasri10@gmail.com <br>
-LinkedIn: Profilimi görüntüle
+📧 ayyildizhasanbasri10@gmail.com <br>
+💼 LinkedIn Profilim
 </p>
 </section>
 
