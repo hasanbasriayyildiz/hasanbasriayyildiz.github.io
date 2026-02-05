@@ -1,190 +1,424 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hasan Basri Ayyıldız</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasan Basri Ayyıldız | CV</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
-body{
-font-family: Roboto;
-margin:0;
-background:#f0f2f5;
-}
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.06);
+      --card2: rgba(255,255,255,0.08);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --line: rgba(255,255,255,0.14);
+      --primary: #3b82f6;
+      --primary2:#2563eb;
+      --accent:#f59e0b;
+      --shadow: 0 18px 45px rgba(0,0,0,0.35);
+    }
 
-header{
-background:linear-gradient(90deg,#1e3a8a,#3b82f6);
-color:white;
-text-align:center;
-padding:40px;
-}
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(59,130,246,0.22), transparent 60%),
+        radial-gradient(800px 450px at 85% 20%, rgba(245,158,11,0.18), transparent 55%),
+        radial-gradient(900px 600px at 50% 95%, rgba(37,99,235,0.20), transparent 60%),
+        var(--bg);
+      color: var(--text);
+    }
 
-header h1{
-margin:0;
-}
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 26px 18px 40px;
+    }
 
-main{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
+    /* HERO */
+    .hero{
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px 22px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(400px 160px at 25% 15%, rgba(59,130,246,0.25), transparent 60%),
+                  radial-gradient(380px 150px at 80% 25%, rgba(245,158,11,0.22), transparent 60%);
+      pointer-events:none;
+      filter: blur(10px);
+    }
+    .hero-inner{
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+      align-items: center;
+    }
+    @media(max-width:780px){
+      .hero-inner{ grid-template-columns: 1fr; }
+    }
 
-section{
-background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:12px;
-box-shadow:0 3px 12px rgba(0,0,0,0.1);
-}
+    .name{
+      font-size: 34px;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.6px;
+    }
+    .subtitle{
+      margin:0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 15.5px;
+    }
+    .pill-row{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .pill i{ color: var(--accent); }
 
-h2{
-color:#1e3a8a;
-}
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content: flex-end;
+    }
+    @media(max-width:780px){
+      .actions{ justify-content:flex-start; }
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid var(--line);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      will-change: transform;
+      user-select:none;
+    }
+    .btn i{ font-size: 16px; }
+    .btn-primary{
+      background: linear-gradient(180deg, var(--primary), var(--primary2));
+      color: white;
+      border-color: rgba(255,255,255,0.14);
+    }
+    .btn-ghost{
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+    }
+    .btn:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.22);
+    }
 
-.btn{
-display:inline-block;
-padding:8px 16px;
-margin:5px;
-background:#3b82f6;
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
+    /* SECTIONS */
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media(max-width:900px){
+      .grid{ grid-template-columns: 1fr; }
+    }
 
-.btn:hover{
-background:#1e3a8a;
-}
+    .card{
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.075);
+    }
+    .card h2{
+      margin:0 0 12px 0;
+      font-size: 16px;
+      letter-spacing: -0.2px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .card h2 i{ color: var(--accent); }
 
-ul{
-list-style:none;
-padding:0;
-}
+    .text{
+      margin:0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 14.5px;
+    }
 
-li{
-margin-bottom:12px;
-}
-</style>
+    .list{
+      margin: 0;
+      padding: 0;
+      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .item{
+      display:flex;
+      align-items:flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+    }
+    .item-left{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .item-left i{
+      margin-top: 2px;
+      color: var(--primary);
+      min-width: 18px;
+    }
+    .item-title{
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+      font-size: 14.5px;
+    }
+    .item-sub{
+      margin: 4px 0 0 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .item-actions{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .mini{
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 6px;
+    }
+    .chip{
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+
+    footer{
+      margin-top: 18px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 13.5px;
+      padding: 18px 0 6px;
+    }
+    footer .small{
+      display:block;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
 
-<header>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1 class="name">Hasan Basri Ayyıldız</h1>
+          <p class="subtitle">
+            Elektrik-Elektronik Mühendisliği (3. Sınıf) • Samsun Üniversitesi • GANO: <b>3.35</b><br>
+            EVOART Elektrikli Araç Takımı (Motor Bölümü) • TÜBİTAK 2209-A RF Projesi • YEDAŞ Staj Deneyimi
+          </p>
 
-<h1>Hasan Basri Ayyıldız</h1>
-<p>Elektrik Elektronik Mühendisliği | Samsun Üniversitesi | GANO: 3.35</p>
+          <div class="pill-row">
+            <span class="pill"><i class="fas fa-location-dot"></i> Samsun</span>
+            <span class="pill"><i class="fas fa-language"></i> İngilizce: B1–B2</span>
+            <span class="pill"><i class="fas fa-toolbox"></i> AutoCAD • Python • C# • Proteus • ANSYS</span>
+          </div>
+        </div>
 
-<a class="btn" href="mailto:ayyildizhasanbasri10@gmail.com">
-<i class="fas fa-envelope"></i> Email
-</a>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:ayyildizhasanbasri10@gmail.com">
+            <i class="fas fa-envelope"></i> Email
+          </a>
 
-<a class="btn" href="https://www.linkedin.com/in/hasan-basri-ayyildiz-144507344" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
+          <a class="btn btn-ghost" target="_blank"
+             href="https://www.linkedin.com/in/hasan-basri-ayyildiz-144507344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
 
-</header>
+          <!-- CV indir: Repo'ya CV.pdf yükle -->
+          <a class="btn btn-ghost" href="CV.pdf" target="_blank">
+            <i class="fas fa-download"></i> CV İndir
+          </a>
+        </div>
+      </div>
+    </section>
 
-<main>
+    <!-- GRID -->
+    <div class="grid">
 
-<section>
-<h2>Hakkımda</h2>
-<p>
-Samsun Üniversitesi Elektrik-Elektronik Mühendisliği 3. sınıf öğrencisiyim.
-EVOART Elektrikli Araç Takımı’nda motor tasarım ekibinde görev almaktayım.
-TÜBİTAK 2209-A kapsamında RF kapsama haritalandırması ve spektrum doluluk analizi projesinde yer almaktayım.
-YEDAŞ elektrik dağıtım staj deneyimim bulunmaktadır.
-</p>
-</section>
+      <section class="card">
+        <h2><i class="fas fa-user"></i> Hakkımda</h2>
+        <p class="text">
+          Samsun Üniversitesi Elektrik-Elektronik Mühendisliği 3. sınıf öğrencisiyim (GANO: 3.35).
+          EVOART Elektrikli Araç Topluluğu’nda motor bölümünde görev alıyorum.
+          TÜBİTAK 2209-A kapsamında kampüs ortamında RF kapsama haritalandırması ve spektrum doluluk analizi odaklı projede yer almaktayım.
+          Geçtiğimiz yaz YEDAŞ’ta stajımı tamamladım.
+        </p>
+      </section>
 
-<section>
-<h2>Projeler</h2>
+      <section class="card">
+        <h2><i class="fas fa-diagram-project"></i> Projeler</h2>
 
-<ul>
+        <ul class="list">
+          <li class="item">
+            <div class="item-left">
+              <i class="fas fa-bolt"></i>
+              <div>
+                <p class="item-title">EVOART Elektrikli Araç</p>
+                <p class="item-sub">Motor tasarımı ve ilgili elektrik sistemleri.</p>
+              </div>
+            </div>
+            <div class="item-actions">
+              <a class="btn btn-ghost mini" target="_blank"
+                 href="https://www.instagram.com/evoart2020?igsh=c2wwM255NHM1bGw0">
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+            </div>
+          </li>
 
-<li>
-<b>EVOART Elektrikli Araç</b> – Motor Tasarımı
+          <li class="item">
+            <div class="item-left">
+              <i class="fas fa-satellite-dish"></i>
+              <div>
+                <p class="item-title">TÜBİTAK 2209-A RF Projesi</p>
+                <p class="item-sub">RF kapsama haritalandırması, spektrum doluluk analizi ve değerlendirmeler.</p>
+              </div>
+            </div>
+            <div class="item-actions">
+              <a class="btn btn-ghost mini" target="_blank"
+                 href="https://hasanbasriayyildiz.github.io/TÜBİTAK_PROJESİ.pdf">
+                <i class="fas fa-file"></i> Rapor
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-<a class="btn" href="https://www.instagram.com/evoart2020" target="_blank">
-<i class="fab fa-instagram"></i> Takım Instagram
-</a>
+      <section class="card">
+        <h2><i class="fas fa-briefcase"></i> Staj</h2>
+        <ul class="list">
+          <li class="item">
+            <div class="item-left">
+              <i class="fas fa-building"></i>
+              <div>
+                <p class="item-title">YEDAŞ</p>
+                <p class="item-sub">Elektrik dağıtım ve saha uygulamaları.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-</li>
+      <section class="card">
+        <h2><i class="fas fa-screwdriver-wrench"></i> Teknik Beceriler</h2>
+        <div class="skills">
+          <span class="chip">AutoCAD</span>
+          <span class="chip">Python</span>
+          <span class="chip">C#</span>
+          <span class="chip">Proteus</span>
+          <span class="chip">ANSYS</span>
+        </div>
+      </section>
 
-<li>
-<b>TÜBİTAK 2209-A RF Projesi</b>
+      <section class="card">
+        <h2><i class="fas fa-certificate"></i> Sertifikalar</h2>
+        <ul class="list">
+          <li class="item">
+            <div class="item-left">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <p class="item-title">BTK Akademi</p>
+                <p class="item-sub">Temel Elektronik ve Robotiğe Giriş</p>
+              </div>
+            </div>
+            <div class="item-actions">
+              <a class="btn btn-ghost mini" target="_blank"
+                 href="https://hasanbasriayyildiz.github.io/Temel_Elektronik_ve_Robotiğe_Giriş_Sertifika.pdf">
+                <i class="fas fa-certificate"></i> Sertifika
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-<a class="btn"
-href="https://hasanbasriayyildiz.github.io/TÜBİTAK_PROJESİ.pdf"
-target="_blank">
+      <section class="card">
+        <h2><i class="fas fa-address-card"></i> İletişim</h2>
+        <p class="text">
+          <b>Email:</b> <a style="color:#93c5fd;" href="mailto:ayyildizhasanbasri10@gmail.com">ayyildizhasanbasri10@gmail.com</a><br>
+          <b>LinkedIn:</b> <a style="color:#93c5fd;" target="_blank"
+            href="https://www.linkedin.com/in/hasan-basri-ayyildiz-144507344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+            Profilimi görüntüle
+          </a>
+        </p>
+      </section>
 
-<i class="fas fa-file"></i> Proje Raporunu İncele
+    </div>
 
-</a>
+    <footer>
+      © 2026 Hasan Basri Ayyıldız
+      <span class="small">Bu site kişisel portföy ve staj başvuruları için hazırlanmıştır.</span>
+    </footer>
 
-</li>
-
-</ul>
-
-</section>
-
-<section>
-<h2>Staj</h2>
-
-<ul>
-<li>YEDAŞ – Elektrik Dağıtım Stajı</li>
-</ul>
-
-</section>
-
-<section>
-<h2>Teknik Beceriler</h2>
-
-<ul>
-<li>AutoCAD</li>
-<li>Python</li>
-<li>C#</li>
-<li>Proteus</li>
-<li>ANSYS</li>
-</ul>
-
-</section>
-
-<section>
-<h2>Sertifikalar</h2>
-
-<ul>
-
-<li>
-BTK Akademi – Temel Elektronik ve Robotiğe Giriş
-
-<a class="btn"
-href="https://hasanbasriayyildiz.github.io/Temel_Elektronik_ve_Robotiğe_Giriş_Sertifika.pdf"
-target="_blank">
-
-<i class="fas fa-certificate"></i> Sertifikayı Gör
-
-</a>
-
-</li>
-
-</ul>
-
-</section>
-
-<section>
-<h2>Yabancı Dil</h2>
-
-<ul>
-<li>İngilizce – B1 / B2</li>
-</ul>
-
-</section>
-
-</main>
-
+  </div>
 </body>
 </html>
