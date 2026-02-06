@@ -11,101 +11,107 @@
 <style>
 
 body{
-font-family:Inter;
-margin:0;
-background:#f6f8fc;
-color:#111827;
+  font-family:Inter;
+  margin:0;
+  background:#f6f8fc;
+  color:#111827;
 }
 
 .wrap{
-max-width:950px;
-margin:auto;
-padding:20px;
+  max-width:950px;
+  margin:auto;
+  padding:20px;
 }
 
 header{
-background:linear-gradient(90deg,#1e3a8a,#2563eb);
-color:white;
-padding:30px;
-border-radius:16px;
+  background:linear-gradient(90deg,#1e3a8a,#2563eb);
+  color:white;
+  padding:30px;
+  border-radius:16px;
 }
 
 .title{
-margin:0;
-font-size:28px;
+  margin:0;
+  font-size:28px;
 }
 
 .sub{
-margin-top:8px;
-opacity:0.9;
+  margin-top:8px;
+  opacity:0.9;
 }
 
 .btn{
-display:inline-block;
-padding:10px 16px;
-margin:6px;
-background:white;
-color:#1e3a8a;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-border:1px solid #e5e7eb;
+  display:inline-block;
+  padding:10px 16px;
+  margin:6px;
+  background:white;
+  color:#1e3a8a;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  border:1px solid #e5e7eb;
 }
 
 .btn:hover{
-background:#f1f5f9;
+  background:#f1f5f9;
 }
 
 main{
-margin-top:20px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:16px;
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+/* Mobil uyum (grid bozulmasın) */
+@media (max-width: 820px){
+  main{ grid-template-columns: 1fr; }
+  header{ padding:22px; }
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:14px;
-border:1.5px solid #d1d5db;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
+  background:white;
+  padding:20px;
+  border-radius:14px;
+  border:1.5px solid #d1d5db;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 .card h2{
-margin-top:0;
-color:#1e40af;
-display:flex;
-align-items:center;
-gap:8px;
+  margin-top:0;
+  color:#1e40af;
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
 
 .text{
-color:#4b5563;
-line-height:1.7;
+  color:#4b5563;
+  line-height:1.7;
 }
 
 .project-box{
-border:1.5px solid #e5e7eb;
-padding:14px;
-border-radius:12px;
-margin-top:12px;
-background:#fafafa;
+  border:1.5px solid #e5e7eb;
+  padding:14px;
+  border-radius:12px;
+  margin-top:12px;
+  background:#fafafa;
 }
 
 .skills span{
-display:inline-block;
-background:#f1f5f9;
-padding:8px 12px;
-border-radius:20px;
-margin:4px;
-font-size:13px;
-border:1px solid #e5e7eb;
+  display:inline-block;
+  background:#f1f5f9;
+  padding:8px 12px;
+  border-radius:20px;
+  margin:4px;
+  font-size:13px;
+  border:1px solid #e5e7eb;
 }
 
 footer{
-text-align:center;
-margin-top:20px;
-color:#6b7280;
+  text-align:center;
+  margin-top:20px;
+  color:#6b7280;
 }
 
 </style>
@@ -148,25 +154,21 @@ Elektrik-Elektronik Mühendisliği 3. sınıf öğrencisiyim. Elektrikli araç t
 <h2><i class="fas fa-diagram-project"></i> Projeler</h2>
 
 <div class="project-box">
-
 <b><i class="fas fa-car-battery"></i> EVOART Elektrikli Araç Takımı</b>
 <p class="text">Motor tasarımı ve elektrik sistemleri geliştirme.</p>
 
 <a class="btn" href="https://www.instagram.com/evoart2020" target="_blank">
 <i class="fab fa-instagram"></i> Takım Sayfası
 </a>
-
 </div>
 
 <div class="project-box">
-
 <b><i class="fas fa-satellite-dish"></i> TÜBİTAK 2209-A RF Projesi</b>
 <p class="text">RF kapsama haritalandırması ve spektrum doluluk analizi.</p>
 
 <a class="btn" href="https://hasanbasriayyildiz.github.io/TÜBİTAK_PROJESİ.pdf" target="_blank">
 <i class="fas fa-file-alt"></i> Proje Raporu
 </a>
-
 </div>
 
 </section>
@@ -174,6 +176,16 @@ Elektrik-Elektronik Mühendisliği 3. sınıf öğrencisiyim. Elektrikli araç t
 <section class="card">
 <h2><i class="fas fa-briefcase"></i> Staj Deneyimi</h2>
 <p class="text">YEDAŞ – Elektrik Dağıtım Stajı</p>
+</section>
+
+<section class="card">
+<h2><i class="fas fa-users"></i> Topluluklar</h2>
+
+<div class="project-box">
+<b><i class="fas fa-bolt"></i> Elektrik Elektronik Mühendisliği Topluluğu</b>
+<p class="text">Aktif Üye – etkinlik ve organizasyon süreçlerinde görev almaktayım.</p>
+</div>
+
 </section>
 
 <section class="card">
